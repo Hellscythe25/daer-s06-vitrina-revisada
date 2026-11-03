@@ -1,0 +1,24 @@
+{% comment %}
+PARTE 1 — La plantilla base. Todas las páginas heredan de esta.
+
+Pártanla de referencia/webshop-index.html (la misma plantilla del Lab 6 regular) y:
+  1. Carguen los estáticos con {% load static %} y {% static '...' %}, nunca con la ruta escrita a mano:
+     vendor/bootstrap/css/bootstrap.min.css, css/shop.css, vendor/jquery/jquery.min.js y
+     vendor/bootstrap/js/bootstrap.bundle.min.js (están en tienda/static/).
+  2. Un bloque `titulo` dentro de <title> y un bloque `content` donde va el contenido de cada página.
+  3. El menú lateral con las categorías reales: recorran `categorias` (la reciben todas las plantillas)
+     y enlacen cada una con {% url 'categoria' cat.id %}. La categoría que se está viendo lleva la
+     clase `active` (en categoria.html la vista también envía `categoria`).
+  4. El nombre de la tienda enlaza al inicio con {% url 'index' %}.
+Comprueben con: python manage.py duelo
+{% endcomment %}<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO(alumno) layout.html</title>
+  </head>
+  <body>
+    <p>TODO(alumno) Parte 1: escribir layout.html</p>
+    {% block content %}{% endblock %}
+  </body>
+</html>
